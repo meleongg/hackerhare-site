@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Deeper cool periwinkle — stronger contrast vs bunny lavender (#d3ceee / #e4d7ec) */
+  --bg-primary: #a8b8dc;
+  --bg-secondary: #ffffff;
+  --text-primary: #001342;
+  --text-muted: #4a5580;
+  --text-tagline: #1b2a5a;
+  --text-status: #6b5a00;
+  --mascot-lavender: #d3ceee;
+  --rocket-orange: #e08500;
+  --agent-black: #212121;
+  --accent-yellow: #c9a800;
+  --card-border: rgb(139 149 179 / 45%);
+  --card-bg: #ffffff;
+  --hero-card-bg: #ffffff;
+  --placeholder-bg: #c4d0e8;
+  --btn-primary-fg: #ffffff;
+  --btn-outline-bg: #c4d0e8;
+  --btn-outline-fg: #001342;
+  --btn-outline-border: rgb(74 85 128 / 45%);
+}
+
+.dark {
+  --bg-primary: #001342;
+  --bg-secondary: #1b2a5a;
+  --text-primary: #ebeaf8;
+  --text-muted: #a8b2cc;
+  --text-tagline: #d3ceee;
+  --text-status: #fff491;
+  --mascot-lavender: #d3ceee;
+  --rocket-orange: #ffa321;
+  --agent-black: #212121;
+  --accent-yellow: #fff491;
+  --card-border: rgb(139 149 179 / 30%);
+  --card-bg: #1b2a5a;
+  --hero-card-bg: #1b2a5a;
+  --placeholder-bg: #152045;
+  --btn-primary-fg: #001342;
+  --btn-outline-bg: #152045;
+  --btn-outline-fg: #ffffff;
+  --btn-outline-border: rgb(235 234 248 / 40%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-tagline: var(--text-tagline);
+  --color-text-status: var(--text-status);
+  --color-mascot-lavender: var(--mascot-lavender);
+  --color-rocket-orange: var(--rocket-orange);
+  --color-agent-black: var(--agent-black);
+  --color-accent-yellow: var(--accent-yellow);
+  --font-display: var(--font-syncopate);
+  --font-sans: var(--font-jakarta);
+  --font-mono: var(--font-space-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+.surface-primary {
+  background-color: var(--bg-primary);
+}
+
+.surface-header {
+  background-color: color-mix(in srgb, var(--bg-secondary) 94%, transparent);
+}
+
+.surface-card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.hero-card {
+  position: relative;
+  z-index: 20;
+  background-color: var(--hero-card-bg);
+  border-color: var(--card-border);
+  opacity: 1;
+  box-shadow:
+    0 24px 48px rgb(0 0 0 / 18%),
+    0 0 0 1px var(--card-border);
+}
+
+.surface-placeholder {
+  background-color: var(--placeholder-bg);
+}
+
+.font-display {
+  font-family: var(--font-syncopate), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-space-mono), ui-monospace, monospace;
+}
+
+.star-field {
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, var(--accent-yellow), transparent),
+    radial-gradient(1px 1px at 80px 120px, #ffffff, transparent),
+    radial-gradient(
+      1.5px 1.5px at 160px 60px,
+      var(--accent-yellow),
+      transparent
+    ),
+    radial-gradient(1px 1px at 240px 180px, #ffffff, transparent),
+    radial-gradient(1px 1px at 320px 40px, var(--accent-yellow), transparent);
+  background-size: 360px 220px;
+  opacity: 0.35;
+}
+
+.dark .star-field {
+  opacity: 0.5;
+}
+
+/* Feather only the flat outer export edge of each cloud */
+.cloud-fade-left {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 10%,
+    #000 100%
+  );
+  mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 100%);
+}
+
+.cloud-fade-right {
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    #000 10%,
+    #000 100%
+  );
+  mask-image: linear-gradient(to left, transparent 0%, #000 10%, #000 100%);
+}
+
+.mascot-glow {
+  filter: drop-shadow(0 12px 28px rgb(0 19 66 / 14%));
+}
+
+.dark .mascot-glow {
+  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 35%));
 }
