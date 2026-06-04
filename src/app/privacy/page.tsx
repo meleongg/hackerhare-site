@@ -8,7 +8,7 @@ import { GITHUB_REPO_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Privacy Policy | HackerHare",
   description:
-    "How HackerHare handles data: local heuristics, zero-knowledge architecture, and anonymous global telemetry.",
+    "How HackerHare handles data: on-device heuristics, no collection of form or browsing content, and optional anonymous global telemetry.",
 };
 
 export default function PrivacyPage() {
@@ -23,20 +23,26 @@ export default function PrivacyPage() {
         </>
       }
     >
-      <LegalSection title="1. 100% Local Heuristics & Zero-Knowledge Architecture">
+      <LegalSection title="1. On-Device Heuristics & Personal Data">
         <p>
-          HackerHare is built from the ground up on a strict zero-knowledge
-          model.
+          HackerHare is built with a privacy-first model: security checks run in
+          your browser, and we do not receive the content of your browsing or
+          forms.
         </p>
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            All webpage form scanning, insecure protocol checks, and deceptive
-            UI analyses are executed completely offline, locally on your
-            machine.
+            Webpage form scanning, insecure protocol checks, and deceptive UI
+            analyses run locally on your device inside the extension.
           </li>
           <li>
             We do not read, log, collect, or store your passwords, form inputs,
-            personal identification numbers (such as SSNs), or browsing history.
+            personal identification numbers (such as SSNs), or browsing history
+            on our servers.
+          </li>
+          <li>
+            The only network request from the extension is the optional,
+            anonymous counter ping described in Section 2—not your page URLs,
+            field values, or threat context.
           </li>
         </ul>
       </LegalSection>
@@ -64,9 +70,11 @@ export default function PrivacyPage() {
 
       <LegalSection title="3. Data Sharing and Third Parties">
         <p>
-          Because we do not collect your personal data, we do not sell, trade,
-          or share your information with any third-party entities, advertisers,
-          or analytics firms.
+          We do not collect personal browsing or form content, and we do not
+          sell, trade, or share that information with third-party entities,
+          advertisers, or analytics firms. Anonymous aggregate telemetry (a
+          single +1 per blocked heuristic) is used only for the public community
+          counter on this site.
         </p>
       </LegalSection>
 

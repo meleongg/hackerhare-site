@@ -22,9 +22,11 @@ export default function TermsPage() {
     >
       <LegalSection title="1. Description of Service">
         <p>
-          HackerHare is a local browser utility designed to help users identify
-          potential security vulnerabilities on the web, such as unencrypted
-          credential forms (HTTP) and potentially deceptive input fields.
+          HackerHare is a browser utility that runs on your device to help users
+          identify potential security vulnerabilities on the web, such as
+          unencrypted credential forms (HTTP) and potentially deceptive input
+          fields. It may optionally report anonymous aggregate block counts as
+          described in our Privacy Policy.
         </p>
       </LegalSection>
 

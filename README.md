@@ -1,6 +1,6 @@
 # HackerHare
 
-Marketing site for **HackerHare**, a browser extension that runs local security heuristics on web forms—flagging risky autofill, deceptive UI, phishing-style domains, and unencrypted credential submission—without sending your browsing data to the cloud.
+Marketing site for **HackerHare**, a browser extension that runs security heuristics **on your device**—flagging risky autofill, deceptive UI, phishing-style domains, and unencrypted credential submission. Form and page content stay local; the extension may send an **anonymous +1 ping** when a heuristic blocks something (see Privacy Policy)—no URLs, inputs, or identifiers.
 
 This repo hosts the public landing page, a live **global intercept counter** (anonymous +1 pings from the extension), Privacy Policy / Terms pages, and the `/api/metrics/increment` telemetry endpoint.
 
