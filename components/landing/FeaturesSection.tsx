@@ -1,3 +1,4 @@
+import { BriefingCarousel } from "@/components/landing/BriefingCarousel";
 import { SpaceDecor } from "@/components/landing/SpaceDecor";
 import { PROBLEMS, VALUE_PROPOSITION } from "@/lib/constants";
 
@@ -12,15 +13,14 @@ export function FeaturesSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative z-10 flex flex-col gap-6">
-            <div className="surface-card rounded-2xl border border-dashed p-8 sm:p-10">
+            <div className="surface-card rounded-2xl border p-8 sm:p-10">
               <p className="text-text-status font-mono text-xs font-medium tracking-widest">
-                BRIEFING UI: PENDING
+                BRIEFING UI
               </p>
-              <div className="surface-placeholder border-text-muted/25 mt-6 flex aspect-[4/3] items-center justify-center rounded-xl border">
-                <p className="text-text-muted max-w-xs text-center text-sm">
-                  Extension briefing UI — coming soon
-                </p>
-              </div>
+              <p className="text-text-muted mt-2 text-sm">
+                Live intercepts from the extension in the field.
+              </p>
+              <BriefingCarousel />
             </div>
           </div>
 

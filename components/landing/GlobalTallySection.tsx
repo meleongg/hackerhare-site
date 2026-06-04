@@ -16,7 +16,7 @@ export async function GlobalTallySection() {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="surface-card border-rocket-orange/35 from-mascot-lavender/35 via-card-bg to-card-bg dark:from-mascot-lavender/15 mx-auto max-w-lg rounded-2xl border bg-gradient-to-b p-8 text-center shadow-[0_12px_40px_rgb(224_133_0_/_12%)] sm:p-10 dark:shadow-[0_12px_40px_rgb(255_163_33_/_10%)]">
-          <p className="text-rocket-orange font-mono text-xs font-medium tracking-widest">
+          <p className="text-rocket-orange font-mono text-sm font-semibold tracking-[0.2em] sm:text-base">
             GLOBAL INTERCEPTS
           </p>
           <p

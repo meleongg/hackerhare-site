@@ -11,6 +11,12 @@ export const SITE_DESCRIPTION =
 
 export const TAGLINE = "Committed to protecting you with just a few clicks.";
 
+export const GITHUB_REPO_URL =
+  process.env.NEXT_PUBLIC_GITHUB_REPO_URL?.trim() ||
+  "https://github.com/meleongg/hackerhare-site";
+
+export const LEGAL_LAST_UPDATED = "June 2026";
+
 export const PROBLEMS = [
   {
     label: "MISSION 01",
