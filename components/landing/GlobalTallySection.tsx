@@ -12,20 +12,20 @@ export async function GlobalTallySection() {
   return (
     <section
       aria-labelledby="global-tally-heading"
-      className="surface-primary border-text-muted/15 border-t py-12 sm:py-16"
+      className="surface-primary pt-0 pb-14 sm:pb-16"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="surface-card mx-auto max-w-lg rounded-2xl border p-8 text-center sm:p-10">
-          <p className="text-text-status font-mono text-xs font-medium tracking-widest">
+        <div className="surface-card border-rocket-orange/35 from-mascot-lavender/35 via-card-bg to-card-bg dark:from-mascot-lavender/15 mx-auto max-w-lg rounded-2xl border bg-gradient-to-b p-8 text-center shadow-[0_12px_40px_rgb(224_133_0_/_12%)] sm:p-10 dark:shadow-[0_12px_40px_rgb(255_163_33_/_10%)]">
+          <p className="text-rocket-orange font-mono text-xs font-medium tracking-widest">
             GLOBAL INTERCEPTS
           </p>
           <p
             id="global-tally-heading"
-            className="font-display text-text-primary mt-4 text-[clamp(2rem,8vw,3.25rem)] leading-none tracking-[0.06em]"
+            className="font-display text-rocket-orange mt-4 text-[clamp(2rem,8vw,3.25rem)] leading-none tracking-[0.06em]"
           >
             {tallyFormatter.format(totalBlocked)}
           </p>
-          <p className="text-text-muted mt-3 text-sm leading-relaxed">
+          <p className="text-text-tagline mt-3 text-sm leading-relaxed font-medium">
             Threats blocked across the fleet by HackerHare agents.
           </p>
         </div>

@@ -5,7 +5,7 @@ export function FeaturesSection() {
   return (
     <section
       id="features"
-      className="surface-primary border-text-muted/15 relative overflow-hidden border-t lg:overflow-visible"
+      className="surface-primary border-text-muted/15 relative scroll-mt-20 overflow-hidden border-t lg:overflow-visible"
     >
       <SpaceDecor variant="features" showRight={false} />
 

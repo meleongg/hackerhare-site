@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 import {
   CTA_CHROME_STORE,
   EXTENSION_URL,
@@ -22,6 +23,19 @@ export function ExtensionLinks({
   className,
   showMissionsLink = false,
 }: ExtensionLinksProps) {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  function scrollToMissions(event: React.MouseEvent<HTMLAnchorElement>) {
+    const target = document.getElementById("features");
+    if (!target) return;
+
+    event.preventDefault();
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
+    window.history.pushState(null, "", "#features");
+  }
   const linkProps = HAS_EXTENSION_URL
     ? {
         href: EXTENSION_URL,
@@ -56,7 +70,9 @@ export function ExtensionLinks({
 
       {showMissionsLink && (
         <Button asChild variant="outline" size={size}>
-          <Link href="#features">See missions</Link>
+          <a href="#features" onClick={scrollToMissions}>
+            See missions
+          </a>
         </Button>
       )}
     </div>
