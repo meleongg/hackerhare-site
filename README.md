@@ -24,11 +24,11 @@ cp .env.example .env.local
 
 Set in `.env.local`:
 
-| Variable                      | Required          | Purpose                                     |
-| ----------------------------- | ----------------- | ------------------------------------------- |
-| `DATABASE_URL`                | Yes (for counter) | Neon Postgres connection string             |
-| `NEXT_PUBLIC_EXTENSION_URL`   | No                | Chrome Web Store link on CTAs               |
-| `NEXT_PUBLIC_GITHUB_REPO_URL` | No                | Footer contact link (defaults to this repo) |
+| Variable                      | Required          | Purpose                                        |
+| ----------------------------- | ----------------- | ---------------------------------------------- |
+| `DATABASE_URL`                | Yes (for counter) | Neon Postgres connection string                |
+| `NEXT_PUBLIC_EXTENSION_URL`   | No                | Overrides default Chrome Web Store listing URL |
+| `NEXT_PUBLIC_GITHUB_REPO_URL` | No                | Footer contact link (defaults to this repo)    |
 
 ```bash
 npm run dev

@@ -7,11 +7,7 @@ import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
 import { useMounted } from "@/hooks/use-prefers-reduced-motion";
-import {
-  CTA_CHROME_STORE,
-  EXTENSION_URL,
-  HAS_EXTENSION_URL,
-} from "@/lib/constants";
+import { CTA_HEADER, EXTENSION_URL, HAS_EXTENSION_URL } from "@/lib/constants";
 
 import logoDarkTheme from "@/app/assets/logo-dark-theme.svg";
 import logoLightTheme from "@/app/assets/logo-light-theme.svg";
@@ -65,8 +61,8 @@ export function Header() {
           <Button asChild size="sm" className="max-sm:px-3">
             <Link {...storeLinkProps}>
               <ExternalLink className="size-4 shrink-0 sm:hidden" aria-hidden />
-              <span className="hidden sm:inline">{CTA_CHROME_STORE}</span>
-              <span className="sm:hidden">Store</span>
+              <span className="hidden sm:inline">{CTA_HEADER}</span>
+              <span className="sm:hidden">Chrome</span>
             </Link>
           </Button>
 

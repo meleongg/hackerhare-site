@@ -1,10 +1,13 @@
+export const CHROME_STORE_URL =
+  "https://chromewebstore.google.com/detail/edfmhlohdnoohbdojdhnlkomjgpiejlh?utm_source=item-share-cb";
+
 export const EXTENSION_URL =
-  process.env.NEXT_PUBLIC_EXTENSION_URL?.trim() || "#";
+  process.env.NEXT_PUBLIC_EXTENSION_URL?.trim() || CHROME_STORE_URL;
 
 export const HAS_EXTENSION_URL = EXTENSION_URL !== "#";
 
-export const CTA_CHROME_STORE = "Visit Chrome Web Store";
-export const CTA_HEADER = "Chrome Web Store";
+export const CTA_CHROME_STORE = "Add to Chrome";
+export const CTA_HEADER = "Add to Chrome";
 
 export const SITE_DESCRIPTION =
   "Your galactic field operative for web privacy, blocking trackers, identifying deceptive forms, and safeguarding your digital footprint before you hit submit.";

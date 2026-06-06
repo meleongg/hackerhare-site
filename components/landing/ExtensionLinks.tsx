@@ -51,22 +51,12 @@ export function ExtensionLinks({
 
   return (
     <div className={cn("flex flex-col gap-3", className)}>
-      <Button
-        asChild
-        size={size}
-        className={cn(!HAS_EXTENSION_URL && "opacity-90")}
-      >
+      <Button asChild size={size}>
         <Link {...linkProps}>
           <ExternalLink className="size-4 shrink-0" aria-hidden />
           {CTA_CHROME_STORE}
         </Link>
       </Button>
-
-      {!HAS_EXTENSION_URL && (
-        <p className="text-text-muted font-mono text-xs">
-          Chrome Web Store listing coming soon
-        </p>
-      )}
 
       {showMissionsLink && (
         <Button asChild variant="outline" size={size}>
