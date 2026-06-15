@@ -55,4 +55,4 @@ export const PROBLEMS = [
 ] as const;
 
 export const VALUE_PROPOSITION =
-  "HackerHare transforms passive browsing into a secure, monitored mission, making it easier for everyday users to protect personal data without a cybersecurity degree.";
+  "HackerHare transforms passive browsing into a secure, monitored mission, making it easier for everyday users to protect personal data.";

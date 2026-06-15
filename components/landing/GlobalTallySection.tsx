@@ -26,7 +26,8 @@ export async function GlobalTallySection() {
             {tallyFormatter.format(totalBlocked)}
           </p>
           <p className="text-text-tagline mt-3 text-sm leading-relaxed font-medium">
-            Threats blocked across the fleet by HackerHare agents.
+            Potential risks flagged across the fleet by HackerHare agents—local
+            heuristic alerts, not confirmed malicious activity.
           </p>
         </div>
       </div>

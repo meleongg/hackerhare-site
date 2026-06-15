@@ -85,27 +85,30 @@ export default function PrivacyPage() {
             at any time.
           </li>
           <li>
-            When a local security check identifies a threat on your device, the
-            extension may send a blank, stateless POST request to our metrics
-            endpoint at{" "}
+            When a local security check flags a potential risk on your device
+            (including alerts that may later prove to be false positives, such
+            as lookalike-domain heuristics on legitimate sites), the extension
+            may send a blank, stateless POST request to our metrics endpoint at{" "}
             <Link
               href={`${METRICS_SITE_URL}/api/metrics/increment`}
               className="text-rocket-orange font-medium underline-offset-2 hover:underline"
             >
               {METRICS_SITE_URL}
             </Link>{" "}
-            to increment a public global counter.
+            to increment a public global counter of heuristic flags—not a count
+            of confirmed attacks.
           </li>
           <li>
-            This request contains no request body and no page URLs, threat
+            This request contains no request body and no page URLs, alert
             context, form content, user identifiers, or account information. It
             is used only to add +1 to an aggregate total, not to track you
             individually.
           </li>
           <li>
             We do not use this ping to build user profiles or to store your
-            browsing history. Our counter is a single community statistic, not a
-            per-user log.
+            browsing history. Our counter is a single community statistic of
+            heuristic alerts, not a per-user log and not proof that each flag
+            was a real threat.
           </li>
         </ul>
       </LegalSection>

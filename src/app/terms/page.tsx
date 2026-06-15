@@ -34,8 +34,9 @@ export default function TermsPage() {
           identify potential security vulnerabilities on the web, such as
           unencrypted credential forms (HTTP), deceptive form UI, and
           hostname-based phishing signals. Security checks run locally in your
-          browser; optional anonymous global counter telemetry is described in
-          our Privacy Policy and is off by default.
+          browser; optional anonymous global counter telemetry (a tally of
+          heuristic flags, not confirmed attacks) is described in our Privacy
+          Policy and is off by default.
         </p>
       </LegalSection>
 
@@ -46,7 +47,10 @@ export default function TermsPage() {
           heuristic engine attempts to flag risky forms and pages, we do not
           guarantee 100% detection of all phishing or malicious web practices,
           nor do we guarantee that flagged elements are definitively malicious
-          (false positives may occur). Use this utility at your own discretion.
+          (false positives may occur—for example, hostname heuristics on
+          well-known sites such as Shopify or Spotify). Alerts and the optional
+          public global counter reflect heuristic checks, not confirmed threats.
+          Use this utility at your own discretion.
         </p>
       </LegalSection>
 
