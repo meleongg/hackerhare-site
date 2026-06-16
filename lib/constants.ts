@@ -25,7 +25,7 @@ export const EXTENSION_GITHUB_REPO_URL =
 export const METRICS_SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://hackerhare.vercel.app";
 
-export const LEGAL_LAST_UPDATED = "June 3, 2026";
+export const LEGAL_LAST_UPDATED = "June 2026";
 
 export const PROBLEMS = [
   {

@@ -1,15 +1,15 @@
 # HackerHare
 
-Marketing site for **HackerHare**, a browser extension that runs security heuristics **on your device**—flagging risky autofill, deceptive UI, phishing-style domains, and unencrypted credential submission. Form and page content stay local; the extension may send an **anonymous +1 ping** when a heuristic blocks something (see Privacy Policy)—no URLs, inputs, or identifiers.
+Marketing site for **[HackerHare](https://hackerhare.vercel.app)** — a Chrome extension that runs security heuristics **on your device** to flag risky autofill, deceptive UI, phishing-style hostnames, and unencrypted credential submission. Page content and URLs are not sent to our servers for scanning.
 
-This repo hosts the public landing page, a live **global intercept counter** (anonymous +1 pings from the extension), Privacy Policy / Terms pages, and the `/api/metrics/increment` telemetry endpoint.
+This repo hosts the landing page, live **global intercept counter**, [Privacy Policy](https://hackerhare.vercel.app/privacy) / [Terms](https://hackerhare.vercel.app/terms), and the `/api/metrics/increment` telemetry endpoint.
 
 ## Tech stack
 
 - **Next.js 16** (App Router) · **React 19** · **TypeScript**
 - **Tailwind CSS 4** · **Framer Motion** · **next-themes**
 - **Neon** (`@neondatabase/serverless`) for the global metrics counter
-- Deployed on **Vercel** (typical setup)
+- Deployed on **Vercel**
 
 ## Getting started
 
@@ -42,4 +42,4 @@ Without `DATABASE_URL`, the site still runs; the global tally and increment API 
 
 ## Extension telemetry
 
-The extension POSTs to `/api/metrics/increment` with header `x-hackerhare-agent` (see route handler). CORS is enabled for cross-origin extension requests. The counter is display-only marketing telemetry—no URLs, IPs, or user identifiers.
+When users opt in, the extension sends an empty POST to `/api/metrics/increment` with a handshake header (`x-hackerhare-agent`). CORS is enabled for extension requests. The counter reflects **heuristic flags**, not confirmed attacks—no URLs, page content, trusted-site lists, IPs, or user identifiers.

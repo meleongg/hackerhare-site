@@ -57,9 +57,12 @@ export default function TermsPage() {
       <LegalSection title="3. Your control">
         <p>
           You control the extension at all times. Form Shielding and related
-          alert toggles can be enabled or disabled in the popup. The Anonymous
-          global counter is optional and off by default; you may enable or
-          disable it at any time without affecting local protection features.
+          alert toggles can be enabled or disabled in the popup. You can manage
+          a local trusted-site list and review bundled system defaults in
+          extension Settings. Trusting a site affects phishing hostname checks
+          only; other protections may still run. The Anonymous global counter is
+          optional and off by default; you may enable or disable it at any time
+          without affecting local protection features.
         </p>
       </LegalSection>
 
